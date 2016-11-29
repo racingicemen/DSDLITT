@@ -24,7 +24,7 @@ def derivative_b2(T, Y):
 
 def derivative_w1(X, Z, T, Y, W2):
     # return X.T.dot(((Y-T).dot(W2.T) * (Z*(1-Z)))) # sigmoid
-    return X.T.dot(((Y_T).dot(W2.T) * np.sign(Z))) # relu
+    return X.T.dot(((Y-T).dot(W2.T) * np.sign(Z))) # relu
 
 def derivative_b1(Z, T, Y, W2):
     # return ((Y-T).dot(W2.T) * (Z*(1-Z))).sum(axis=0) # sigmoid
